@@ -31,13 +31,13 @@ public class AddEmployeePage extends CommonMethods {
     public WebElement createLoginDetails;
 
     @FindBy(id = "user_name")
-    public WebElement usernameCreate;
+    public WebElement username;
 
     @FindBy (id = "user_password")
     public WebElement userPassword;
 
     @FindBy (id = "re_password")
-    public WebElement rePassword;
+    public WebElement confirmPassword;
 
     public void enterFirstAndLastName(String firstName, String lastName) {
         sendText(firstNameTextBox, firstName);

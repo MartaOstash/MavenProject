@@ -25,12 +25,34 @@ public class DashboardPage extends CommonMethods {
     @FindBy(xpath = "//div[@class = 'menu']/ul/li")
     public List<WebElement> dashTabs;
 
+    @FindBy (linkText = "Admin")
+    public WebElement adminButton;
+
+    @FindBy(id="menu_admin_Qualifications")
+    public WebElement qualificationDD;
+
+    @FindBy(id = "menu_admin_viewLanguages")
+    public WebElement languagesButton;
+
+
     public List<String> getDashTabs() {
        List<String> dashTabsText = new ArrayList<>();
         for(WebElement dashTab: dashTabs) {
             dashTabsText.add(dashTab.getText());
         }
         return dashTabsText;
+    }
+
+    public void clickOnAdminButton(){
+        jsClick(adminButton);
+
+    }
+    public void clickOnQualificationDD(){
+        jsClick(qualificationDD);
+    }
+
+    public void  clickOnLanguagesButton(){
+        jsClick(languagesButton);
     }
 
     public void clickOnPIM() {

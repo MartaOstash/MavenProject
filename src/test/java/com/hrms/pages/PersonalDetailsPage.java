@@ -22,11 +22,18 @@ public class PersonalDetailsPage extends CommonMethods {
     @FindBy (id = "personal_txtEmpLastName")
     public WebElement lastNameText;
 
-    @FindBy(xpath = "//div[@id = 'profile-pic']//following-sibling::h1")
+    @FindBy(xpath = "//*[@id=\"profile-pic\"]/h1")
     public WebElement userProfileName;
+
+    @FindBy(linkText = "Qualifications")
+    public WebElement qualificationButton;
 
     public String getUserProfileName() {
         return userProfileName.getText();
+    }
+
+    public void clickOnQualificationBtn(){
+        jsClick(qualificationButton);
     }
 
     public PersonalDetailsPage() {
