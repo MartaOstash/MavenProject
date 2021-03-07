@@ -15,9 +15,10 @@ public class generateTokenSteps {
     public void a_JWT_is_generated() {
         RequestSpecification generateTokenRequest= given().header("Content-Type","application/json")
                 .body("{\n" +
-                        "  \"email\": \"mdddaddhsdfdddyg@gmail.com\",\n" +
-                        "  \"password\": \"srin123\"\n" +
-                        "}");
+                                "     \"email\": \"OleCgkklnkbds@gmail.com\",\n" +
+                                "  \"password\": \"srin12322\"\n" +
+                                "\n" +
+                                "}\n");
         Response generateTokenResponse=generateTokenRequest.when().post(ApiConstants.GENERATE_TOKEN_URI);
         generateTokenResponse.prettyPrint();
 

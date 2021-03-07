@@ -23,6 +23,7 @@ public class BaseClass {
         switch (ConfigsReader.getPropertyValue("browser").toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
+
                 ChromeOptions chromeOptions=new ChromeOptions();
                 chromeOptions.setHeadless(true);
 

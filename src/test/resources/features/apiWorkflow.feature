@@ -61,7 +61,7 @@ Feature: Syntax HRMS API Workflow
     Then the status code is 200
     And it contains key1 "Total Employees" and key2 "Employees"
 
-
+@marta
   Scenario: get all Employees status
     Given a request is prepared to get all employees status
     When a GET call is made to retrieve all employees status
