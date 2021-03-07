@@ -54,7 +54,7 @@ Feature: Syntax HRMS API Workflow
     Then the status code is 201
     And  the employee is successfully deleted with the "message" in response "Entry deleted"
     And the employee ID "employee[0].employee_id" is the same as the one stored in global
-
+  @marta
   Scenario: get all Employees
     Given a request is prepared to get all employees
     When a GET call is made to retrive all employees
